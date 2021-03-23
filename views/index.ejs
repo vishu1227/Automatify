@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img to pdf</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
+    <script src="../libraries/p5.speech.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/sketch.js"></script> -->
+    <link rel="stylesheet" href="../libraries/index.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <h2>Automatify!</h2><span>Automate processes like extract text from img,speech recognintion,text translation</span>
+        </nav>
+    </section>
+    <section>
+        <p>Extracte text from image</p>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="img_2_txt">
+                <input type="file" name="avatar" accept="image/*" onchange="loadFile(event)" placeholder="Select file" required>
+                <button type="submit" id="convert">Convert</button>
+            </div>
+            <div class="img_2_txt">
+                <img id="input_img"/>
+                <p id="img_text"></p>
+            </div>
+        </form>
+    </section>
+    <section>
+        <div id="text_div">
+            <p>Translate from</p>
+            <select id="from" data-placeholder="Choose a Language...">
+                <option value="auto">Auto detect</option>
+                <option value="AR">Arabic</option>
+                <option value="EN">English</option>
+                <option value="DE">German</option>
+                <option value="ZH">Chinese (Mandarin)</option>
+                <option value="HI">Hindi</option>
+                <option value="FR">French</option>
+                <option value="GA">Irish</option>
+                <option value="IT">Italian</option>
+                <option value="JA">Japanese</option>
+                <option value="KO">Korean</option>
+                <option value="PT">Portuguese</option>
+                <option value="RU">Russian</option>
+                <option value="ES">Spanish</option>
+              </select>
+              <p>to</p>
+              <select id="to" data-placeholder="Choose a Language...">
+                <option value="AR">Arabic</option>
+                <option value="EN">English</option>
+                <option value="DE">German</option>
+                <option value="ZH">Chinese (Mandarin)</option>
+                <option value="HI">Hindi</option>
+                <option value="FR">French</option>
+                <option value="GA">Irish</option>
+                <option value="IT">Italian</option>
+                <option value="JA">Japanese</option>
+                <option value="KO">Korean</option>
+                <option value="PT">Portuguese</option>
+                <option value="RU">Russian</option>
+                <option value="ES">Spanish</option>
+              </select>        
+              <button type="button" id="translateB">Translate</button>
+        </div>
+        <div id="translation_box">
+            <textarea name="" id="lang1" cols="32" rows="10"></textarea>
+            <p id="trans_txt"></p>
+        </div>
+    </section>
+    <section>
+        <button onclick="sppechRecognize()">Click to specch recognize</button>
+        <p id="trans_sppech"></p>
+    </section>
+</body>
+<script src="../libraries/index.js"></script>
+</html>

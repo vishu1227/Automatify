@@ -1,0 +1,70 @@
+*{
+    padding:0%;
+    margin: 0%;
+    font-family: 'Ubuntu';
+}
+section:nth-child(2),section:nth-child(3){
+    padding: 1%;
+}
+section nav{
+    padding: 1%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+section nav span{
+    margin-top: 7px;
+    margin-left: 10px;
+    color: black;
+}
+
+section:nth-child(2) form button{
+    width: fit-content;
+    padding: 0% 2%;
+    margin-left: 10px;
+}
+section:nth-child(2) form input{
+    padding: 10px;
+    border: 1px solid black;
+    width: fit-content;
+}
+.img_2_txt{
+    display: flex;
+    flex-direction: row;
+}
+#text_div
+{
+    display: flex;
+    flex-direction: row;
+    padding: 15px 10px;
+    border: 1px solid black;
+    width: fit-content;
+}
+#text_div button{
+    padding: 15px;
+}
+#text_div button:nth-child(5)
+{
+    margin-left: 10px;
+}
+#text_div p{
+    padding: 15px;
+}
+textarea{
+    margin-top: 20px;
+    padding: 5px;
+}
+#translation_box{
+    display: flex;
+    flex-direction: row;
+}
+#translation_box p{
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 5px;
+    height: 150px;
+    width: 265px;
+    display: block;
+    margin-left: 1.5%;
+}
+
